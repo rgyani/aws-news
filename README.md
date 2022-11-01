@@ -3,6 +3,26 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+### AWS Introduces server-side filters GraphQL subscriptions with AWS Amplify
+28 Oct 2022:  
+Subscriptions are long-lasting GraphQL read operations that can update their result whenever a particular server-side event occurs. Most commonly, updated results are pushed from the server to subscribing clients. For example, a chat application's server might use a subscription to push newly received messages to all clients in a particular chat room.       
+With Amplify v10.3.1, we can now filter real-time GraphQL subscription events service-side, which gives developers the ability to optimize network traffic by only getting the real-time events for the data they care about. So now, in the above scenario, our subsciption will filter and push only messages which contains a particular text
+
+```
+//establishing real-time subscription with
+const sub = API.graphql(
+  onCreateTweet, {
+  input: {
+     filter: { // <- Brand NEW filter support!
+        content: {
+           contains: "AWS Amplify"
+        }
+     }
+  }
+}).subscribe()
+```
+[link](https://aws.amazon.com/blogs/mobile/announcing-server-side-filters-for-real-time-graphql-subscriptions-with-aws-amplify/)
+
 
 ### AWS Introduces AWS Parameters and Secrets Lambda Extension to Improve Performances and Security
 18 Oct 2022:  
