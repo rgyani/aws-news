@@ -3,6 +3,12 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+### AWS Managed Services (AMS) now supports SQL Server on EC2 Operations
+03 Nov 2022:  
+With this launch, customers can now bring their existing SQL Server licenses (BYOL) to EC2 and take advantage of AMS to operate more efficiently.  
+SQL Server on EC2 Operations is available to AMS customers for an additional fee and is available in all regions where AMS is available.
+
+
 ### AWS Introduces server-side filters GraphQL subscriptions with AWS Amplify
 28 Oct 2022:  
 Subscriptions are long-lasting GraphQL read operations that can update their result whenever a particular server-side event occurs. Most commonly, updated results are pushed from the server to subscribing clients. For example, a chat application's server might use a subscription to push newly received messages to all clients in a particular chat room.       
