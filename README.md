@@ -3,11 +3,18 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+
+### New region in Switzerland, eu-central-2
+08 Nov 2022:
+AWS announced the opening of its 28th AWS Region: Europe (Zurich), also known by its API name: eu-central-2.  
+[link](https://aws.amazon.com/blogs/aws/a-new-aws-region-opens-in-switzerland/)
+
+
 ### AWS Managed Services (AMS) now supports SQL Server on EC2 Operations
 03 Nov 2022:  
 With this launch, customers can now bring their existing SQL Server licenses (BYOL) to EC2 and take advantage of AMS to operate more efficiently.  
-SQL Server on EC2 Operations is available to AMS customers for an additional fee and is available in all regions where AMS is available.
-
+SQL Server on EC2 Operations is available to AMS customers for an additional fee and is available in all regions where AMS is available.  
+[link](https://aws.amazon.com/about-aws/whats-new/2022/11/aws-managed-services-supports-sql-server-ec2-operations/)
 
 ### AWS Introduces server-side filters GraphQL subscriptions with AWS Amplify
 28 Oct 2022:  
