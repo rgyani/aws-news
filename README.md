@@ -3,6 +3,11 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+### AppSync GraphQL APIs support Javascript Resolvers  
+17 Nov 2022:  
+AWS AppSync supports JavaScript resolvers and provides a resolver evaluation engine to test them before publishing them to the cloud.  
+[link](https://aws.amazon.com/blogs/aws/aws-appsync-graphql-apis-supports-javascript-resolvers/)
+
 
 ### New region in Switzerland, eu-central-2
 08 Nov 2022:
