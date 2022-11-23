@@ -3,6 +3,21 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+### AWS opens the 30th AWS Region – Asia Pacific (Hyderabad) Region in India.
+21 Nov 2022:  
+AWS announced the general availability of the 30th AWS Region, Asia Pacific (Hyderabad) Region, with three Availability Zones and the ap-south-2 API name.
+[link](https://aws.amazon.com/blogs/aws/now-open-the-30th-aws-region-asia-pacific-hyderabad-region-in-india/)
+
+
+### Cross-Account Access capabilities for AWS Step Functions
+18 Nov 2022:  
+We have to use resource-based policies to make cross-account access for Step Functions possible. With resource-based policies, you can specify who has access to the resource and what actions they can perform on it.  
+However, Not all AWS services support resource-based policies. eg, it is possible to enable cross-account access via resource-based policies with services like AWS Lambda, Amazon SQS, or Amazon SNS, but, services such as Amazon DynamoDB do not support resource-based policies, so your workflows can only use Step Functions’ direct integration if it belongs to the same account.
+
+Now, customers can take advantage of identity-based policies in Step Functions so your workflow can directly invoke resources in other AWS accounts, thus allowing cross-account service API integrations.  
+[link](https://aws.amazon.com/blogs/compute/introducing-cross-account-access-capabilities-for-aws-step-functions/)
+
+
 ### AppSync GraphQL APIs support Javascript Resolvers  
 17 Nov 2022:  
 AWS AppSync supports JavaScript resolvers and provides a resolver evaluation engine to test them before publishing them to the cloud.  
