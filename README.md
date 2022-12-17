@@ -3,6 +3,49 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+### Accelerate Your JAVA Lambda Functions with Lambda SnapStart
+28 Nov 2022:   
+When using Lambda, your functions are run inside of a secure and isolated execution environment. The lifecycle of each environment consists of three main phases: Init, Invoke, and Shutdown.  
+Among other things, the Init phase bootstraps the runtime for the function and runs the function’s static code. In many cases, these operations are completed within milliseconds and do not lengthen the phase in any appreciable way. In the remaining cases, they can take a considerable amount of time, for several reasons.  
+First, initializing the runtime for some languages can be expensive. For example, the Init phase for a Lambda function that uses one of the Java runtimes in conjunction with a framework such as Spring Boot, Quarkus, or Micronaut can sometimes take as long as ten seconds (this includes dependency injection, compilation of the code for the function, and classpath component scanning).   
+Second, the static code might download some machine learning models, pre-compute some reference data, or establish network connections to other AWS services.
+
+After you enable Lambda SnapStart for a particular Lambda function, publishing a new version of the function will trigger an optimization process.   
+The process launches your function and runs it through the entire Init phase. Then it takes an immutable, encrypted snapshot of the memory and disk state, and caches it for reuse.  
+When the function is subsequently invoked, the state is retrieved from the cache in chunks on an as-needed basis and used to populate the execution environment. 
+
+This optimization makes invocation time faster and more predictable, since creating a fresh execution environment no longer requires a dedicated Init phase.  
+
+**Some Caveats:**
+1. Only available for Java 11 runtime.
+2. SnapStart does not support provisioned concurrency, the arm64 architecture, the Lambda Extensions API, Amazon Elastic File System (Amazon EFS), AWS X-Ray, or ephemeral storage greater than 512 MB.
+3. Adds 90secs to deployment
+
+[link](https://aws.amazon.com/blogs/aws/new-accelerate-your-lambda-functions-with-lambda-snapstart/)
+
+
+### Amazon OpenSearch (formerly ElasticSearch) Serverless 
+28 Nov 2022:  
+Before the launch of OpenSearch Serverless, you created a managed cluster, specifying instance types, counts, and storage options, and then managed the lifecycle and shard strategy for indices within that cluster. With OpenSearch Serverless, you create a Collection, which manages a group of indices that work together to support a specific workload. You no longer need to specify the hardware or manage the indices directly.   
+[link](https://aws.amazon.com/blogs/aws/preview-amazon-opensearch-serverless-run-search-and-analytics-workloads-without-managing-clusters/)
+
+### Amazon Inspector Now Scans AWS Lambda Functions for Vulnerabilities
+28 Nov 2022:   
+Amazon Inspector is available starting today for functions and layers written in Java, NodeJS, and Python. By default, it continually scans all the functions inside your account, but if you want to exclude a particular Lambda function, you can attach the tag with the key InspectorExclusion and the value LambdaStandardScanning.   
+[link](https://aws.amazon.com/blogs/aws/amazon-inspector-now-scans-aws-lambda-functions-for-vulnerabilities/)
+
+
+### Step Functions Distributed Map 
+28 Nov 2022:   
+With Step functions, the new distributed map state can launch up to ten thousand parallel workflows to process data, instead of 40 earlier  
+[link](https://aws.amazon.com/blogs/aws/step-functions-distributed-map-a-serverless-solution-for-large-scale-parallel-data-processing/)
+
+### Amazon CloudWatch launches cross-account observability across multiple AWS accounts
+27 Nov 2022:  
+With cross-account observability in CloudWatch, you can seamlessly search, visualize, and analyze your metrics, logs, and traces without any account boundaries.   
+[link](https://aws.amazon.com/about-aws/whats-new/2022/11/amazon-cloudwatch-cross-account-observability-multiple-aws-accounts/)
+
+
 ### AWS opens the 30th AWS Region – Asia Pacific (Hyderabad) Region in India.
 21 Nov 2022:  
 AWS announced the general availability of the 30th AWS Region, Asia Pacific (Hyderabad) Region, with three Availability Zones and the ap-south-2 API name.
