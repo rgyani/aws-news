@@ -3,6 +3,13 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+
+### Amazon DynamoDB now supports up to 100 actions per transaction
+6 Sep, 2022:  
+Amazon DynamoDB transactions enable coordinated, all-or-nothing changes to multiple items both within and across tables. The maximum number of actions in a single transaction has now increased from 25 to 100.
+
+
+
 ### Accelerate Your JAVA Lambda Functions with Lambda SnapStart
 28 Nov 2022:   
 When using Lambda, your functions are run inside of a secure and isolated execution environment. The lifecycle of each environment consists of three main phases: Init, Invoke, and Shutdown.  
