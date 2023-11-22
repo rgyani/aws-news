@@ -3,6 +3,28 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+### AWS Bedrock, a fully managed service to build generative AI applications with foundation models 
+28 Sep, 2023:  
+Read More here
+https://aws.amazon.com/blogs/aws/build-ai-apps-with-partyrock-and-amazon-bedrock/
+
+
+### AWS VPC Lattice for connecting clients to services within a VPC
+31 Mar, 2023:   
+VPC Lattice is similar to AWS PrivateLink with a key difference.  
+While AWS PriceLink works by placing Elastic Network Interfaces within your subnet, which your clients can use to tunnel network traffic to the destination service, VPC Lattice works by exposing endpoints as link-local addresses(only accessible by software that runs on the client instance itself)
+
+AWS has carved out the range 169.254.171.0/24 for VPC Lattice’s use, typically routing directly to 169.254.171.0
+
+ Remember, we earlier had other link-local addresses like
+ * EC2’s Instance Metadata Service, which is located at 169.254.169.254
+ * Amazon Time Sync Service (NTP), which is located at 169.254.169.123
+ * Route 53’s DNS Resolver, which is located at 169.254.169.253
+ * ECS’s Task Metadata Endpoint, which is located at 169.254.170.2
+ 
+ These didnot require any special routing or security rules.
+
+ But VPC does require Security Groups and NACLs to allow traffic to and from the VPC Lattice data plane at 169.254.171.0/24 on whichever port the destination service exposes.
 
 ### Amazon DynamoDB now supports up to 100 actions per transaction
 6 Sep, 2022:  
