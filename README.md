@@ -3,6 +3,12 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+### CloudFront KeyValueStore: A low-latency datastore for CloudFront Functions
+21 Nov 2023:
+With CloudFront Functions in Amazon CloudFront, you can write lightweight functions in JavaScript for high-scale, latency-sensitive CDN customizations. Previously, you had to embed configuration data inside the function code, eg. data to determine if a URL should be redirected and which URL to redirect to.  
+With CloudFront KeyValueStore, you can now update the data associated with a function and the function code independently from each other. This simplifies function code and makes it easy to update data without the need to deploy code changes.
+
+
 ### AWS Bedrock, a fully managed service to build generative AI applications with foundation models 
 28 Sep, 2023:  
 Read More here
