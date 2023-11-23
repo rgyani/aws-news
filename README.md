@@ -251,7 +251,7 @@ AWS introduces tiered pricing for Lambda. With tiered pricing, customers who run
 ![img](imgs/f9e801e5-9150-40f7-aff2-5964219b5baa.jfif)
 [link](https://aws.amazon.com/blogs/compute/introducing-tiered-pricing-for-aws-lambda/)
 
-### AWS Managed Kadka Serverless
+### AWS Managed Kafka Serverless
 28 April 2022:  
 Amazon MSK reduces the work needed to set up, scale, and manage Apache Kafka in production. With Amazon MSK, you can create a cluster in minutes and start sending data.   
 Amazon MSK Serverless automatically provisions and manages the required resources to provide on-demand streaming capacity and storage for your applications   
