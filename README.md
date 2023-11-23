@@ -18,7 +18,7 @@ https://aws.amazon.com/blogs/aws/build-ai-apps-with-partyrock-and-amazon-bedrock
 ### AWS VPC Lattice for connecting clients to services within a VPC
 31 Mar, 2023:   
 VPC Lattice is similar to AWS PrivateLink with a key difference.  
-While AWS PriceLink works by placing Elastic Network Interfaces within your subnet, which your clients can use to tunnel network traffic to the destination service, VPC Lattice works by exposing endpoints as link-local addresses(only accessible by software that runs on the client instance itself)
+While AWS PrivateLink works by placing Elastic Network Interfaces within your subnet, which your clients can use to tunnel network traffic to the destination service, VPC Lattice works by exposing endpoints as link-local addresses(only accessible by software that runs on the client instance itself)
 
 AWS has carved out the range 169.254.171.0/24 for VPC Lattice’s use, typically routing directly to 169.254.171.0
 
