@@ -3,6 +3,10 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+### Amazon CloudFront announces availability of Embedded Points of Presence
+23 Feb 2024:  
+Points of Presence (POPs) are a new type of CloudFront infrastructure deployed closest to end viewers, within internet service provider (ISP) and mobile network operator (MNO) networks to deliver large scale live-stream video, video-on-demand (VOD), and game downloads. 
+
 ### CloudFront KeyValueStore: A low-latency datastore for CloudFront Functions
 21 Nov 2023:
 With CloudFront Functions in Amazon CloudFront, you can write lightweight functions in JavaScript for high-scale, latency-sensitive CDN customizations. Previously, you had to embed configuration data inside the function code, eg. data to determine if a URL should be redirected and which URL to redirect to.  
