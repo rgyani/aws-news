@@ -3,6 +3,25 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+### Amazon S3 will no longer charge for several HTTP error codes
+13 May 2024:
+After a recent outcry over S3 charging for Unauthorized requests (4xx), AWS Chief Evangelist Jeff Barr got [involved](https://x.com/jeffbarr/status/1787844682216792163) and AWS announced [change](https://aws.amazon.com/about-aws/whats-new/2024/05/amazon-s3-no-charge-http-error-codes)  
+Only took them 14 years, nice!
+
+### Hashicorp sale to IBM
+IBM announced on April 24 2024 that it will pay $6.4 billion ($35 per share) for HashiCorp, has stated that the company will remain independent after the takeover, but based on what actually happened after its previous acquisitions in the IT world, not everybody is sold on that promise.
+
+Earlier in August 2023 Hashicorp, changed their licencing model to Business Source License (BSL) in place of the standard Mozilla Public License v2.0.
+In response to this OpenTofu was forked to be developed as a community-driven alternative to Terraform. However Hashcorp was quick to send them a [Cease-And-Desist letter accusing of stealing code](https://www.reddit.com/r/Terraform/comments/1c1iquc/our_response_to_hashicorps_cease_and_desist/) 
+
+### Redis Licence Change 
+ In 2018, Redis Labs introduced a license change for certain Modules (RedisGraph, RedisSearch, ReJSON, Redis-ML, and RedisBloom but not Redis itself), moving them from the permissive Apache 2.0 license to a more restrictive Common Clause license. This change aimed to prevent cloud service providers from offering Redis Labs' commercial add-ons as a service without sharing revenue.  
+In 2024, Redis underwent another licensing change, adopting the Redis Source Available License v2 (RSALv2) and the Server Side Public License v1 (SSPLv1) for its core repository. This decision prompted the Linux Foundation to create a fork named [Valkey](https://valkey.io/), enabling the community to maintain an open-source version of Redis.  
+Valkey has since been backed by AWS, Google Cloud, Oracle, Ericsson, and Snap Inc, while notably Microsoft has created their own fork named [Garnet](https://github.com/microsoft/garnet).  
+
+Earlier in 2021, Elastic announced a bombshell in the open source world: [the ELK Stack would no longer be open source, as of version 7.11]((https://logz.io/blog/open-source-elasticsearch-doubling-down/).  
+The lead to forks like OpenSearch
+
 ### Amazon CloudFront announces availability of Embedded Points of Presence
 23 Feb 2024:  
 Points of Presence (POPs) are a new type of CloudFront infrastructure deployed closest to end viewers, within internet service provider (ISP) and mobile network operator (MNO) networks to deliver large scale live-stream video, video-on-demand (VOD), and game downloads. 
