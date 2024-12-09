@@ -3,6 +3,26 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+### AWS announces Aurora DSQL (Distributed SQL)
+03 Dec 2024:  
+Amazon just announced a new service called Aurora DSQL (distributed SQL) a serverless, globally distributed database, promising a SLA of 99.999%, multi-regional, **postgres compatible** to compete with [Google Spanner](https://cloud.google.com/spanner).  
+AWS claims that their offer is 4x faster than spanner (in read and write), and globally distributed across multiple regions.  
+* To ensure that the database stays consistent across regions, under minime delays, AWS decoupled compute and storage. This technique is not new and used by other database companies like Neon. The only difference is that Neon is not real-time and global, while Aurora DSQL is.
+* To ensure each region sees commits in the correct order, Aurora DSQL uses Amazon TimeSync Service, an EC2 add-on that synchronizes EC2 clocks using atomic clock satellites.   
+
+As of this writing, Aurora DSQL is missing a lot of feature from Postgres :
+* Database (only one database per cluster)
+* Views
+* Triggers
+* **Foreign keys (a big one…)**
+* a lot of extensions, like pgvector or postgis
+( 10k row update per commit
+
+### AWS announces Amazon S3 Tables - Fully managed Apache Iceberg tables optimized for analytics workloads
+03 Dec 2024:  
+ S3 Tables introduce table buckets, a new bucket type that is purpose-built to store tabular data. With table buckets, you can quickly create tables and set up table-level permissions to manage access to your data lake. You can then load and query data in your tables with standard SQL, and take advantage of Apache Iceberg’s advanced analytics capabilities such as row-level transactions, queryable snapshots, schema evolution, and more. Table buckets also provide policy-driven table maintenance, helping you to automate operational tasks such as compaction, snapshot management, and unreferenced file removal.
+
+
 ### Amazon S3 will no longer charge for several HTTP error codes
 13 May 2024:
 After a recent outcry over S3 charging for Unauthorized requests (4xx), AWS Chief Evangelist Jeff Barr got [involved](https://x.com/jeffbarr/status/1787844682216792163) and AWS announced [change](https://aws.amazon.com/about-aws/whats-new/2024/05/amazon-s3-no-charge-http-error-codes)  
