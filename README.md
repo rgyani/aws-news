@@ -3,6 +3,19 @@
 
 AWS has  over 200+ services, and is continuously releasing/updating existing service, it sometimes becomes difficult to track the updates. Here I am keeping some notes on some services I use and track
 
+###  Microsoft annonces FerretDB 2.0, an open-source document database platform built on PostgreSQL
+28 Jan 2025  
+Microsoft has launched a new open-source document database platform built on PostgreSQL. This platform offers no commercial licensing fees and enhances performance with BSON support. Developers can use FerretDB 2.0 for a MongoDB-like experience with improved performance.
+
+#### Key Features of Microsoft’s Open Source Document Database
+The platform includes two custom PostgreSQL extensions designed to optimize performance and efficiency:
+
+1. **Pg_documentdb_core:** This extension optimises PostgreSQL for BSON (Binary JavaScript Object Notation) handling. BSON is a binary-encoded format of JSON documents, making it much faster to store and retrieve data.
+2. **Pg_documentdb_api:** This extension adds the ability to perform CRUD operations (Create, Read, Update, Delete), manage queries, and index your data.
+
+
+Together, these extensions provide the foundation for building document-based applications on top of a relational system.
+
 ### AWS announces Aurora DSQL (Distributed SQL)
 03 Dec 2024:  
 Amazon just announced a new service called Aurora DSQL (distributed SQL) a serverless, globally distributed database, promising a SLA of 99.999%, multi-regional, **postgres compatible** to compete with [Google Spanner](https://cloud.google.com/spanner).  
